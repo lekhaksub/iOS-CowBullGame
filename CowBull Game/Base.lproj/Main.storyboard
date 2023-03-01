@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CowBull_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cow-Bull" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk9-l3-Ho4">
+                                <rect key="frame" x="119" y="79" width="155" height="72"/>
+                                <color key="backgroundColor" red="0.32156863810000003" green="0.63137257099999999" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Guess." clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YFB-Lu-5cL">
+                                <rect key="frame" x="96.666666666666686" y="371" width="200" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="faH-lT-ama"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cow" translatesAutoresizingMaskIntoConstraints="NO" id="XaG-Xc-ca8">
+                                <rect key="frame" x="9" y="109" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WJw-8g-wZd"/>
+                                    <constraint firstAttribute="width" constant="100" id="vBF-Gt-HZz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bull" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-8e-5Nx">
+                                <rect key="frame" x="288" y="109" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="R7a-E5-mh1"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ugo-Cg-UXA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZR-4l-Qqr">
+                                <rect key="frame" x="40" y="580" width="313" height="142.33333333333337"/>
+                                <string key="text">1. Guess the 4 digit non-repetitive number. 2. Bull means digit is correct and in exact position. 3. Cow means digit is correct but not in position 4. 4 Bulls means you win.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyz-GS-JVB" userLabel="guesses">
+                                <rect key="frame" x="0.0" y="485" width="393" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2i-1W-HwW">
+                                <rect key="frame" x="160.33333333333334" y="425" width="72.666666666666657" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oxi-9A-8j4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Check">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9V6-89-SqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-0w-gQU">
+                                <rect key="frame" x="124.66666666666669" y="181" width="144" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N1b-XE-ffD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Start The Game">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hsu-w2-GOs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc2-mi-c0P">
+                                <rect key="frame" x="157.66666666666666" y="529" width="78" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-nK-vEw">
+                                <rect key="frame" x="124" y="750" width="145" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ScJ-3B-gjt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="arrow.clockwise" catalog="system" imagePlacement="trailing" title="Reset Game" imagePadding="2">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3UB-Cw-CqX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Random Guess History" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-Af-jnj">
+                                <rect key="frame" x="10" y="231" width="373" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="XaG-Xc-ca8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="3WW-lV-J7c"/>
+                            <constraint firstItem="pc2-mi-c0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xf-bu-Zer"/>
+                            <constraint firstItem="pc2-mi-c0P" firstAttribute="top" secondItem="Qyz-GS-JVB" secondAttribute="bottom" constant="20" id="E9O-fr-rEs"/>
+                            <constraint firstItem="Qyz-GS-JVB" firstAttribute="top" secondItem="P2i-1W-HwW" secondAttribute="bottom" constant="20" id="GlF-08-RhP"/>
+                            <constraint firstItem="KTW-8e-5Nx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Hy3-Px-3FB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cZR-4l-Qqr" secondAttribute="trailing" constant="40" id="JbV-Z6-Ffk"/>
+                            <constraint firstItem="oaF-0w-gQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JdF-YI-cNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qyz-GS-JVB" secondAttribute="trailing" id="LWD-vc-IXO"/>
+                            <constraint firstItem="YFB-Lu-5cL" firstAttribute="top" secondItem="oaF-0w-gQU" secondAttribute="bottom" constant="150" id="M9q-Bi-ssT"/>
+                            <constraint firstItem="Qyz-GS-JVB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBG-0z-9Ol"/>
+                            <constraint firstItem="gN9-nK-vEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MhN-yA-ZC8"/>
+                            <constraint firstItem="Yk9-l3-Ho4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PNt-i3-Znf"/>
+                            <constraint firstItem="P2i-1W-HwW" firstAttribute="top" secondItem="YFB-Lu-5cL" secondAttribute="bottom" constant="20" id="PQv-au-Zfc"/>
+                            <constraint firstItem="YFB-Lu-5cL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qlh-0T-ZNM"/>
+                            <constraint firstItem="cZR-4l-Qqr" firstAttribute="top" secondItem="pc2-mi-c0P" secondAttribute="bottom" constant="15" id="Qn3-AP-CZk"/>
+                            <constraint firstItem="KTW-8e-5Nx" firstAttribute="leading" secondItem="Yk9-l3-Ho4" secondAttribute="trailing" constant="14" id="SDc-9K-KwV"/>
+                            <constraint firstItem="oaF-0w-gQU" firstAttribute="top" secondItem="Yk9-l3-Ho4" secondAttribute="bottom" constant="30" id="X1J-MX-iYw"/>
+                            <constraint firstItem="7qG-Af-jnj" firstAttribute="top" secondItem="oaF-0w-gQU" secondAttribute="bottom" constant="10" id="X6a-ub-2HX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7qG-Af-jnj" secondAttribute="trailing" constant="10" id="alf-D7-9bA"/>
+                            <constraint firstItem="YFB-Lu-5cL" firstAttribute="top" secondItem="7qG-Af-jnj" secondAttribute="bottom" constant="10" id="bvZ-r8-FfP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTW-8e-5Nx" secondAttribute="trailing" constant="5" id="g5W-b6-szA"/>
+                            <constraint firstItem="XaG-Xc-ca8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="icO-0w-A7c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gN9-nK-vEw" secondAttribute="bottom" constant="18" id="jyM-Sq-YHN"/>
+                            <constraint firstItem="P2i-1W-HwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6z-jp-xnM"/>
+                            <constraint firstItem="pc2-mi-c0P" firstAttribute="top" secondItem="YFB-Lu-5cL" secondAttribute="bottom" constant="40" id="vJx-lo-Xxp"/>
+                            <constraint firstItem="cZR-4l-Qqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vr4-E2-mzS"/>
+                            <constraint firstItem="7qG-Af-jnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yOb-ca-j2Y"/>
+                            <constraint firstItem="Yk9-l3-Ho4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGS-Pf-hAI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vJx-lo-Xxp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="vJx-lo-Xxp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bullCow" destination="Qyz-GS-JVB" id="3Rx-At-XDw"/>
+                        <outlet property="checkButton" destination="P2i-1W-HwW" id="oFX-AX-YP7"/>
+                        <outlet property="guessedNumber" destination="YFB-Lu-5cL" id="wca-vX-x9t"/>
+                        <outlet property="randomNumberPreviousTries" destination="7qG-Af-jnj" id="wwc-NN-mH6"/>
+                        <outlet property="resetButton" destination="gN9-nK-vEw" id="4YT-N1-aFS"/>
+                        <outlet property="startGameButton" destination="oaF-0w-gQU" id="BCs-oT-Y9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54.198473282442748" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="bull" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="cow" width="166.66667175292969" height="166.66667175292969"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
