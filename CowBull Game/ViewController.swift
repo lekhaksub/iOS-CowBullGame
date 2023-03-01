@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var randomNumberPreviousTries: UITextView!
-    @IBOutlet var bullCow: UILabel!
+    @IBOutlet var bullCowText: UILabel!
     @IBOutlet weak var guessedNumber: UITextField!
     var randomNumber: String = ""
     var randomPreviousTries: [String] = []
@@ -25,7 +25,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
-      
+        bullCowText.text = "Press Start Game to get random number"
+
         guessedNumber.delegate = self
         randomNumberPreviousTries.delegate = self
         if ((guessedNumber.text?.isEmpty) != nil){
@@ -47,6 +48,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         if startButtonCountTaps == 1 {
             
             randomNumber  = randomOf4Items()
+            bullCowText.text = "Enter your guessed number and check"
+
         }
     }
    
@@ -98,7 +101,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
         print("The original number is \(randomNumber) and the guessed number is \(guessedText)")
-        bullCow.text = ("\(numberOfCows) cows \(numberOfBulls) bulls.")
+        bullCowText.text = ("\(numberOfCows) cows \(numberOfBulls) bulls.")
         
         randomPreviousTries.append(("\(randomTries + 1): ") + guessedText + (" \(numberOfCows)C\(numberOfBulls)B"))
         randomNumberPreviousTries.text = (randomPreviousTries.joined(separator: "\n"))
@@ -154,6 +157,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         randomNumberPreviousTries.text = "Random Guess History"
         guessedNumber.text = ""
         randomTries = 0
+        bullCowText.text = "Press Start Game to get random number"
         startGameButton.isEnabled = true
         guessedNumber.isEnabled = false
         checkButton.isEnabled = false

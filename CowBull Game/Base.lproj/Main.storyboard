@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <accessibilityOverrides/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -49,15 +50,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZR-4l-Qqr">
-                                <rect key="frame" x="40" y="580" width="313" height="142.33333333333337"/>
+                                <rect key="frame" x="40" y="574" width="313" height="142.33333333333337"/>
                                 <string key="text">1. Guess the 4 digit non-repetitive number. 2. Bull means digit is correct and in exact position. 3. Cow means digit is correct but not in position 4. 4 Bulls means you win.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyz-GS-JVB" userLabel="guesses">
-                                <rect key="frame" x="0.0" y="485" width="393" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="0.0" y="485" width="393" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,7 +91,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc2-mi-c0P">
-                                <rect key="frame" x="157.66666666666666" y="529" width="78" height="36"/>
+                                <rect key="frame" x="157.66666666666666" y="523" width="78" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +163,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bullCow" destination="Qyz-GS-JVB" id="3Rx-At-XDw"/>
+                        <outlet property="bullCowText" destination="Qyz-GS-JVB" id="3Rx-At-XDw"/>
                         <outlet property="checkButton" destination="P2i-1W-HwW" id="oFX-AX-YP7"/>
                         <outlet property="guessedNumber" destination="YFB-Lu-5cL" id="wca-vX-x9t"/>
                         <outlet property="randomNumberPreviousTries" destination="7qG-Af-jnj" id="wwc-NN-mH6"/>
