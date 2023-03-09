@@ -101,7 +101,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
         print("The original number is \(randomNumber) and the guessed number is \(guessedText)")
-//        bullCowText.text = ("\(numberOfCows) cows \(numberOfBulls) bulls.")
         
         randomPreviousTries.append(("\(randomTries + 1): ") + guessedText + ("       \(numberOfCows)🐄  \(numberOfBulls)🐂"))
         randomNumberPreviousTries.text = (randomPreviousTries.joined(separator: "\n"))
