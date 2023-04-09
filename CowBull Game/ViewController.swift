@@ -59,17 +59,17 @@ class ViewController: UIViewController, UITextViewDelegate {
         if guessedNumber.text!.count == 4 {
             checkButtonCountTaps += 1
 
-            if checkButtonCountTaps == 10 {
-            
-            let ac = UIAlertController(title: "You Lose", message: "Secret Number is \(randomNumber)", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .destructive))
-            present(ac, animated: true)
-            guessedNumber.isEnabled = false
-            startGameButton.isEnabled = false
-            checkButton.isEnabled = false
-            
-        }
-            if checkButtonCountTaps <= 10 {
+            if checkButtonCountTaps == 20 {
+                bullCowText.text = "Secret Number is \(randomNumber)"
+                let ac = UIAlertController(title: "You Lose", message: "Secret Number is \(randomNumber)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .destructive))
+                present(ac, animated: true)
+                guessedNumber.isEnabled = false
+                startGameButton.isEnabled = false
+                checkButton.isEnabled = false
+                
+            }
+            if checkButtonCountTaps <= 20 {
                 cowBullCheck()
             }
         }
@@ -101,9 +101,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
         print("The original number is \(randomNumber) and the guessed number is \(guessedText)")
-        bullCowText.text = ("\(numberOfCows) cows \(numberOfBulls) bulls.")
         
-        randomPreviousTries.append(("\(randomTries + 1): ") + guessedText + (" \(numberOfCows)C\(numberOfBulls)B"))
+        randomPreviousTries.append(("\(randomTries + 1): ") + guessedText + ("       \(numberOfCows)🐄  \(numberOfBulls)🐂"))
         randomNumberPreviousTries.text = (randomPreviousTries.joined(separator: "\n"))
         
         let range = NSRange(location: randomNumberPreviousTries.text.count - 1, length: 0)
@@ -122,10 +121,6 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     func getArrayOfNumbers(fromNumber: String) -> [Int] {
         
-        // 5678
-        // 8 nikalna paryo
-        //5678/10 , 567, (5678 -8)/10 = 567
-        
         var arrayToBeReturned: [Int] = []
         var reducedNumber: Int = Int(fromNumber) ?? 0
         
@@ -140,16 +135,20 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     func finalScore() {
         
-        let ac = UIAlertController(title: "You Won", message: "Secret Number is \(randomNumber)", preferredStyle: .alert)
+        let ac = UIAlertController(title: "You Win", message: "Secret Number is \(randomNumber)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
-        
+        bullCowText.text = "Secret Number is \(randomNumber)"
         checkButton.isEnabled = false
         startGameButton.isEnabled = false
         guessedNumber.isEnabled = false
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        let ac = UIAlertController(title: "Reseting", message: "Secret Number was \(randomNumber)", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .destructive))
+        
+        present(ac, animated: true)
         startButtonCountTaps = 0
         checkButtonCountTaps = 0
         randomPreviousTries = []
@@ -161,6 +160,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         startGameButton.isEnabled = true
         guessedNumber.isEnabled = false
         checkButton.isEnabled = false
+        resetButton.isEnabled = false
     }
 }
 

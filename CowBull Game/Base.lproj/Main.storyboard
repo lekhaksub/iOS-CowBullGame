@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <accessibilityOverrides/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -77,13 +77,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-0w-gQU">
-                                <rect key="frame" x="124.66666666666669" y="181" width="144" height="40"/>
+                                <rect key="frame" x="128.66666666666666" y="181" width="135.99999999999997" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="N1b-XE-ffD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Start The Game">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -112,10 +113,11 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Random Guess History" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-Af-jnj">
-                                <rect key="frame" x="10" y="231" width="373" height="130"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="50" y="231" width="293" height="130"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -140,7 +142,7 @@
                             <constraint firstItem="KTW-8e-5Nx" firstAttribute="leading" secondItem="Yk9-l3-Ho4" secondAttribute="trailing" constant="14" id="SDc-9K-KwV"/>
                             <constraint firstItem="oaF-0w-gQU" firstAttribute="top" secondItem="Yk9-l3-Ho4" secondAttribute="bottom" constant="30" id="X1J-MX-iYw"/>
                             <constraint firstItem="7qG-Af-jnj" firstAttribute="top" secondItem="oaF-0w-gQU" secondAttribute="bottom" constant="10" id="X6a-ub-2HX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7qG-Af-jnj" secondAttribute="trailing" constant="10" id="alf-D7-9bA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7qG-Af-jnj" secondAttribute="trailing" constant="50" id="alf-D7-9bA"/>
                             <constraint firstItem="YFB-Lu-5cL" firstAttribute="top" secondItem="7qG-Af-jnj" secondAttribute="bottom" constant="10" id="bvZ-r8-FfP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTW-8e-5Nx" secondAttribute="trailing" constant="5" id="g5W-b6-szA"/>
                             <constraint firstItem="XaG-Xc-ca8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="icO-0w-A7c"/>
@@ -148,7 +150,7 @@
                             <constraint firstItem="P2i-1W-HwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6z-jp-xnM"/>
                             <constraint firstItem="pc2-mi-c0P" firstAttribute="top" secondItem="YFB-Lu-5cL" secondAttribute="bottom" constant="40" id="vJx-lo-Xxp"/>
                             <constraint firstItem="cZR-4l-Qqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vr4-E2-mzS"/>
-                            <constraint firstItem="7qG-Af-jnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yOb-ca-j2Y"/>
+                            <constraint firstItem="7qG-Af-jnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yOb-ca-j2Y"/>
                             <constraint firstItem="Yk9-l3-Ho4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGS-Pf-hAI"/>
                         </constraints>
                         <variation key="default">
@@ -185,6 +187,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
