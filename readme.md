@@ -7,5 +7,3 @@ A random number guessing logical game that generates 4 digit random numbers. Use
 
 ## Screenshots
 <img src="https://github.com/lekhaksub/iOS-CowBullGame/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2014.55.01.png" width="400">
-
-<img src="https://github.com/lekhaksub/iOS-CowBullGame/blob/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2014.55.04.png" width="300">
