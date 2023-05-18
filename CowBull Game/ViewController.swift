@@ -43,6 +43,11 @@ class ViewController: UIViewController, UITextViewDelegate {
         checkButton.isEnabled = true
         resetButton.isEnabled = true
         guessedNumber.isEnabled = true
+        
+        checkButton.isHidden = false
+        guessedNumber.isHidden = false
+        randomNumberPreviousTries.isHidden = false
+        
 
         startButtonCountTaps += 1
         if startButtonCountTaps == 1 {
@@ -161,6 +166,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         guessedNumber.isEnabled = false
         checkButton.isEnabled = false
         resetButton.isEnabled = false
+        
+        checkButton.isHidden = true
+        guessedNumber.isHidden = true
+        randomNumberPreviousTries.isHidden = true
     }
 }
 
