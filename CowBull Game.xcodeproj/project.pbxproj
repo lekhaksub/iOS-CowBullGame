@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51B3BE6E2A1621FB0044089F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		51FE3AF429965647003F2E9C /* CowBull Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CowBull Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FE3AF729965647003F2E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51FE3AF929965647003F2E9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		51FE3AEB29965647003F2E9C = {
 			isa = PBXGroup;
 			children = (
+				51B3BE6E2A1621FB0044089F /* readme.md */,
 				51FE3AF629965647003F2E9C /* CowBull Game */,
 				51FE3AF529965647003F2E9C /* Products */,
 			);
