@@ -6,4 +6,4 @@ A random number guessing logical game that generates 4 digit random numbers. Use
 <img src="https://github.com/lekhaksub/iOS-CowBullGame/blob/main/Screenshots/Simulator%20Screen%20Recording%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2014.54.43%20(1).gif" width="300">
 
 ## Screenshots
-<img src="https://github.com/lekhaksub/iOS-CowBullGame/blob/main/Screenshots/Screenshot%202023-05-18%20at%2015.34.08.png" width="400">
+<img src="https://github.com/lekhaksub/iOS-CowBullGame/blob/main/Screenshots/Screenshot%202023-05-18%20at%2015.34.08.png" >
